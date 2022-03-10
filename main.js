@@ -20,7 +20,7 @@ function showcountry(data){
     country.classList.add("country");
     country.innerHTML = 
     ` <div class="counrty__img">
-    <img src=${data.flag} alt="country__img"/>
+    <img src=${data.flag} alt=${data.name}/>
 </div>
 <div class="details">
     <h3 class="country__name">${data.name}</h3>
@@ -40,7 +40,8 @@ function showCountryDetails(data){
     const countryInfo =  modal.querySelector(".country__info");
     const modalImg = modal.querySelector("img");
 
-    modalImg.src = data.flag
+    modalImg.src = data.flag;
+    modalImg.alt = data.name;
 
     countryInfo.innerHTML = `
     <h3 class="country__name">${data.name}</h3>
