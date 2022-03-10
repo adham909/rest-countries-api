@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Kumbh Sans", sans-serif;
+}
+header{
+    background-color: hsl(209, 23%, 22%);
+    color: #FFF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+    .container__header{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    .dark__mode{
+        border: none;
+        background-color: transparent;
+        color: #FFF;
+        font-size: 15px;
+        ion-icon{
+            color: #FFF;
+            margin-right: 5px;
+        }
+    }
+    
+}
+
+main{
+    background-color: hsl(207, 26%, 17%);
+    .container{
+        padding: 30px;
+        .functions{
+            display: flex;
+            justify-content: space-between;
+            .search{
+                position: relative;
+                input{
+                    padding: 10px 40px;
+                    border: none;
+                    background-color: hsl(209, 23%, 22%);
+                    color: hsl(0, 0%, 100%);
+                    border-radius: 4px;
+                    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                }
+                input::placeholder{
+                    color: hsl(0, 0%, 100%);
+                }
+                input:focus{
+                    border: 1px solid #FFF;
+                }
+                .search__icon{
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    color: hsl(0, 0%, 100%);
+                
+                }
+            }
+            .dropdown__filter{
+                background-color: hsl(209, 23%, 22%);
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                padding: 8px;
+                font-size: 14px;
+                position: relative;
+                color: hsl(0, 0%, 100%);
+                border-radius: 4px;
+                .filter_by_region{
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    a{
+                        text-decoration: none;
+                        color: hsl(0, 0%, 100%);
+                    }
+                }
+                ul{
+                    position: absolute;
+                    background-color: hsl(209, 23%, 22%);
+                    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                    padding: 20px;
+                    left: 0;
+                    top: 110%;
+                    width: 100%;
+                    display: none;
+                    li{
+                        cursor: pointer;
+                        list-style: none;
+                        margin: 5px 0;
+                    }
+                }
+                .open{
+                    display: block;
+                }
+            }
+        }
+
+        .countries{ 
+            background-color: hsl(207, 26%, 17%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+        .country{
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+            width: calc(100%/4.5);
+            background-color: hsl(209, 23%, 22%);
+            color:  hsl(0, 0%, 100%);
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            cursor: pointer;
+            .counrty__img{
+                img{
+                    width: 100%;
+                }
+            }
+            .details{
+                padding: 20px 20px 30px 20px;
+                h3{
+                    margin-bottom: 20px;
+                }
+                p{
+                    margin-bottom: 7px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }  
+
+    .modal__container{
+        display: none;
+        position: fixed;
+        inset: 0;
+        background-color: hsl(209, 23%, 22%);
+        
+            .container{
+                width: 100%;
+                .back{
+                    background-color: hsl(209, 23%, 22%);
+                    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                    padding: 10px;
+                    font-size: 14px;  
+                    color: hsl(0, 0%, 100%);
+                    border: none;
+                    width: 100px;
+                    cursor: pointer;
+                }
+                .modal{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 100px;
+                    .country__img{
+                        width: 40%;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .country__info{
+                        padding: 20px;
+                        color: hsl(0, 0%, 100%);
+                        width: 50%;
+                        h3{
+                            margin-bottom: 25px;
+                            font-size: 25px;
+                        }
+                        .details{
+                            display: flex;
+                            justify-content: space-between;
+                            .detials__onleft , .details__onright{
+                                p{
+                                    margin-bottom: 7px;
+                                }
+                            }  
+                    }
+                }
+            }
+        }
+    }
+}
+}
+
+
+@media  screen and (max-width : 850px) {
+    main{
+        .container{
+            .countries{
+                .country{
+                    width: calc(100%/ 3.5) !important;
+                }
+            }
+            .modal__container{
+                .container{
+                    .modal{
+                        .country__img{
+                            width: 30% !important;
+                        }
+                        .country__info{
+                            width: 60%;
+                            p{
+                                font-size: 13px;
+                            }
+                            .borders{
+                                margin-top: 10px;
+                                font-size: 12px;                      
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+        
+    }
+     
+}
+
+@media  screen and (max-width : 650px) {
+    main{
+        .container{
+            .countries{
+                .country{
+                    width: calc(100%/ 2.5) !important;
+                }
+            }
+            .modal__container{
+                .container{
+                    .modal{
+                        flex-direction: column;
+                        margin-top: 40px!important;
+                        .country__img{
+                            width: 100% !important;
+                        }
+                        .country__info{
+                            width: 100% !important;
+                            p{
+                                font-size: 13px;
+                            }
+                            .borders{
+                                margin-top: 10px;
+                                font-size: 12px;                      
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
+
+@media  screen and (max-width : 450px) {
+
+    header{
+        h1{
+            font-size: 15px;
+        }
+        .dark__mode{   
+            font-size: 10px; 
+        }
+    }
+    main{
+        .container{
+            .functions{
+                flex-direction: column;
+                .search{
+                    margin-bottom: 5px;
+                    input{
+                        padding: 7px 25px;  
+                    }
+                    .search__icon{
+                        top: 7px;
+                        left: 6px;
+                    }
+                }
+                .dropdown__filter{
+                    padding: 7px;
+                    font-size: 11px;
+                    display: flex;
+                    width: 50%;
+                }
+            }
+            .countries{
+                .country{
+                    width: 100% !important;
+                }
+            }
+            .modal__container{
+                .container{
+                    .modal{
+                        .country__info{
+                            .details{
+                                flex-direction: column;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
+

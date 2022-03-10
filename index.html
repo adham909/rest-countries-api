@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/style.css"/>
+    <title>Countries</title>
+</head>
+<body>
+    <header>
+        <div class="container__header">
+        <h1>Where in the world ?</h1>
+        <button class="dark__mode"><ion-icon name="moon"></ion-icon>Dark mode</button>
+    </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="functions">
+                <div class="search">
+                    <input id="search" type="search" placeholder="search for a country..."/>
+                    <ion-icon class="search__icon" name="search-outline"></ion-icon>
+                </div>
+        
+                <div class="dropdown__filter">
+                    <div id="toggle__dropdown" class="filter_by_region">
+                        <a href="#">Filter by Region</a>
+                        <ion-icon name="arrow-down-outline"></ion-icon>
+                    </div>
+                    
+                    <ul id="ul__dropdown">
+                        <li>All</li>
+                        <li>Africa</li>
+                        <li>America</li>
+                        <li>Asia</li>
+                        <li>Europe</li>
+                        <li>Oceania</li>
+                    </ul>
+                </div>   
+            </section>
+
+            <section id="modal" class="modal__container">
+                <div class="container">
+                    <button id="back" class="back">Back</button>
+                    <div class="modal">
+                        <div class="country__img">
+                            <img src="https://flagcdn.com/ax.svg" alt="name"/>
+                        </div>
+                        <div class="country__info">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="countries">
+                
+            </section>
+        </div>
+    </main>
+
+    
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

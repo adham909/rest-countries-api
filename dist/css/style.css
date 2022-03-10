@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+header {
+  background-color: #2b3945;
+  color: #FFF;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+header .container__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 30px;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+header .dark__mode {
+  border: none;
+  background-color: transparent;
+  color: #FFF;
+  font-size: 15px;
+}
+
+header .dark__mode ion-icon {
+  color: #FFF;
+  margin-right: 5px;
+}
+
+main {
+  background-color: #202c37;
+}
+
+main .container {
+  padding: 30px;
+}
+
+main .container .functions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .container .functions .search {
+  position: relative;
+}
+
+main .container .functions .search input {
+  padding: 10px 40px;
+  border: none;
+  background-color: #2b3945;
+  color: white;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+main .container .functions .search input::-webkit-input-placeholder {
+  color: white;
+}
+
+main .container .functions .search input:-ms-input-placeholder {
+  color: white;
+}
+
+main .container .functions .search input::-ms-input-placeholder {
+  color: white;
+}
+
+main .container .functions .search input::placeholder {
+  color: white;
+}
+
+main .container .functions .search input:focus {
+  border: 1px solid #FFF;
+}
+
+main .container .functions .search .search__icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+}
+
+main .container .functions .dropdown__filter {
+  background-color: #2b3945;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 8px;
+  font-size: 14px;
+  position: relative;
+  color: white;
+  border-radius: 4px;
+}
+
+main .container .functions .dropdown__filter .filter_by_region {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+main .container .functions .dropdown__filter .filter_by_region a {
+  text-decoration: none;
+  color: white;
+}
+
+main .container .functions .dropdown__filter ul {
+  position: absolute;
+  background-color: #2b3945;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 20px;
+  left: 0;
+  top: 110%;
+  width: 100%;
+  display: none;
+}
+
+main .container .functions .dropdown__filter ul li {
+  cursor: pointer;
+  list-style: none;
+  margin: 5px 0;
+}
+
+main .container .functions .dropdown__filter .open {
+  display: block;
+}
+
+main .container .countries {
+  background-color: #202c37;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+main .container .countries .country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+  width: calc(100%/4.5);
+  background-color: #2b3945;
+  color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+
+main .container .countries .country .counrty__img img {
+  width: 100%;
+}
+
+main .container .countries .country .details {
+  padding: 20px 20px 30px 20px;
+}
+
+main .container .countries .country .details h3 {
+  margin-bottom: 20px;
+}
+
+main .container .countries .country .details p {
+  margin-bottom: 7px;
+  font-size: 13px;
+}
+
+main .container .modal__container {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: #2b3945;
+}
+
+main .container .modal__container .container {
+  width: 100%;
+}
+
+main .container .modal__container .container .back {
+  background-color: #2b3945;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  width: 100px;
+  cursor: pointer;
+}
+
+main .container .modal__container .container .modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 100px;
+}
+
+main .container .modal__container .container .modal .country__img {
+  width: 40%;
+}
+
+main .container .modal__container .container .modal .country__img img {
+  width: 100%;
+}
+
+main .container .modal__container .container .modal .country__info {
+  padding: 20px;
+  color: white;
+  width: 50%;
+}
+
+main .container .modal__container .container .modal .country__info h3 {
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+main .container .modal__container .container .modal .country__info .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .container .modal__container .container .modal .country__info .details .detials__onleft p, main .container .modal__container .container .modal .country__info .details .details__onright p {
+  margin-bottom: 7px;
+}
+
+@media screen and (max-width: 850px) {
+  main .container .countries .country {
+    width: calc(100%/ 3.5) !important;
+  }
+  main .container .modal__container .container .modal .country__img {
+    width: 30% !important;
+  }
+  main .container .modal__container .container .modal .country__info {
+    width: 60%;
+  }
+  main .container .modal__container .container .modal .country__info p {
+    font-size: 13px;
+  }
+  main .container .modal__container .container .modal .country__info .borders {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  main .container .countries .country {
+    width: calc(100%/ 2.5) !important;
+  }
+  main .container .modal__container .container .modal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 40px !important;
+  }
+  main .container .modal__container .container .modal .country__img {
+    width: 100% !important;
+  }
+  main .container .modal__container .container .modal .country__info {
+    width: 100% !important;
+  }
+  main .container .modal__container .container .modal .country__info p {
+    font-size: 13px;
+  }
+  main .container .modal__container .container .modal .country__info .borders {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header h1 {
+    font-size: 15px;
+  }
+  header .dark__mode {
+    font-size: 10px;
+  }
+  main .container .functions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .container .functions .search {
+    margin-bottom: 5px;
+  }
+  main .container .functions .search input {
+    padding: 7px 25px;
+  }
+  main .container .functions .search .search__icon {
+    top: 7px;
+    left: 6px;
+  }
+  main .container .functions .dropdown__filter {
+    padding: 7px;
+    font-size: 11px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+  }
+  main .container .countries .country {
+    width: 100% !important;
+  }
+  main .container .modal__container .container .modal .country__info .details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */
